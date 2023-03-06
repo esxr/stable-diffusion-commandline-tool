@@ -5,11 +5,24 @@ This tool allows users to enter prompts and generates images using the backend s
 ___
 
 ### Setup
+
+**Step 1 - Host a Stable Diffusion Server on [Banana Dev](https://banana.dev)**
+
+*Note: If you're a noob, I have already done that part. You just need to email me to get the API Keys.*
+
+**Step 2 - Setup the client**
+
 Assuming you have `python` and `pipenv` installed.
 (Please see [this](https://pipenv.pypa.io/en/latest/install/) if you want help with that).
 
 ```
 pipenv install
+```
+
+Then create a `.env` file in the root folder with the API keys like so:
+```
+API_KEY=<your api key here>
+MODEL_KEY=<you model key here>
 ```
 
 ___
@@ -44,3 +57,9 @@ Example **config.json**
 ```
 
 ___
+### Dev Notes
+- Currently this tool has only been tested with the `Automatic1111-stable-diffusion` mod. The image saving feature might not work with other models since they give the outputs in different formats. I'm working on writing the adapters for those.
+
+___
+### Roadmap
+This tool is just made for testing and seeing whethdr there is a demand for such software in the market yet. Based on the results, I will work on this further if need be.
